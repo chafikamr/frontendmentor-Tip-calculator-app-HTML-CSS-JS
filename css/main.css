@@ -1,0 +1,196 @@
+/*
+**  Author       : Chafik Amraoui
+**  Title        : Splitter 
+**  Date         : 20/10/2021
+**  Design Source: https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX
+**  Github       : Github.com/chafikamr
+*/
+
+
+/** Start Global Rules **/
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: hsl(185deg 41% 84%);
+    font-family: 'Source Code Pro', monospace;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+
+/** End Global Rules **/
+
+header {
+    width: 200px;
+    margin: auto;
+    text-align: center;
+    margin-top: 100px;
+    font-size: .8rem;
+    letter-spacing: 5px;
+    margin-bottom: 50px;
+}
+
+header span {
+    display: block;
+}
+
+.container .Box {
+    background-color: white;
+    width: 800px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    border-radius: 10px;
+    box-shadow: rgb(0 0 0 / 13%) 1px 1px 20px 0px;
+}
+
+.container .Box .inputs {
+    width: 50%;
+    padding: 0 20px;
+}
+
+.container .Box .inputs .bill input {
+    width: 100%;
+    padding: 10px 30px;
+    background-color: #F7F7F7;
+    border: 2px solid hsl(173deg 62% 46%);
+    outline: none;
+    border-radius: 3px;
+    text-align: right;
+    font-size: 1.8rem;
+}
+
+.container .Box .inputs .tips span {
+    display: block;
+    margin-top: 20px;
+}
+
+.container .Box .inputs .tips ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container .Box .inputs .tips ul li {
+    width: 30%;
+    background-color: hsl(183deg 100% 15%);
+    margin: 5px;
+    padding: 9px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color .3s ease-in-out;
+}
+
+.container .Box .inputs .tips ul li:hover {
+    background-color: hsl(173deg 60% 76%);
+    color: hsl(183deg 100% 15%);
+}
+
+.container .Box .inputs .tips ul li input {
+    width: 100%;
+    display: block;
+    height: 100%;
+    border: 2px solid hsl(174deg 61% 77%);
+    padding: 0 20px;
+}
+
+.container .Box .inputs .tips ul li.inp_li {
+    padding: 0;
+}
+
+.container .Box .inputs .number_of_people {
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+.container .Box .inputs .number_of_people input {
+    width: 100%;
+    padding: 14px 30px;
+    background-color: #F7F7F7;
+    border: 2px solid hsl(173deg 62% 46%);
+    outline: none;
+    border-radius: 3px;
+    text-align: right;
+}
+
+.container .Box .result {
+    width: 50%;
+    background-color: hsl(183deg 100% 15%);
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.container .Box .result .flex_amount {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 50%;
+    padding: 10px;
+}
+
+.button {
+    flex-basis: 50%;
+    justify-content: end;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.button button {
+    padding: 10px;
+    background-color: hsl(173deg 61% 77%);
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+.container .Box .result .tip-amount {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.container .Box .result .tip-amount .amount-label>span:first-of-type {
+    font-size: 1rem;
+}
+
+.container .Box .result .tip-amount .amount-label>span:last-of-type {
+    font-size: .8rem;
+    display: block;
+    margin-top: 9px;
+}
+
+.container .Box .result .tip-amount>span:first-of-type {
+    color: rgb(224, 224, 224);
+}
+
+.container .Box .result .tip-amount>span:last-of-type {
+    font-size: 3rem;
+    color: hsl(172deg 66% 45%);
+    font-weight: bold;
+}
+
+.container .Box .inputs>* {
+    margin-bottom: 35px;
+}
+
+.container .Box .inputs>*>.label {
+    margin-bottom: 10px;
+    display: block;
+    font-size: .95rem;
+}
